@@ -1,8 +1,14 @@
-aside {
+.aside {
     width: 34%;
     padding-left: 15px;
     margin-left: 15px;
+    /* padding-bottom: 15px; */
     float: left;
     font-style: italic;
     background-color: lightgray;
   }
+
+
+.col {
+
+}
