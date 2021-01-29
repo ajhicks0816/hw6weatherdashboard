@@ -1,0 +1,4 @@
+1. create click event for search button (add a console.log("clicked!!") before anything else to make sure it works)
+2. make ajax call in click event and console.log the response
+3. use the response to take the properties we want to display to our user and create / update our HTML (the DOM) with that information
+4. try generating the html for our "history" list dynamically (using nothing but javascript) after we click the "search" button

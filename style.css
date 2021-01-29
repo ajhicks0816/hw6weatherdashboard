@@ -29,19 +29,22 @@
     height: 200px;
     width: 10%;
     padding: 20px;
-    background-color: blue;
-    font-color: black;
   }
-
+  
   .row {margin: 0 -5px;}
-
+  
   /* .row after {
     content: "";
     display: table;
     clear: both;
   } */
+  
+  .forecast-card {
+    background-color: blue;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
 
-  /* .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
-    padding: 16px */
+  #current-weather {
+
   }
