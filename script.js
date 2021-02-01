@@ -1,19 +1,19 @@
-//Variables
-var citySearch = document.getElementById("search-button")
+// //Variables
+// var citySearch = document.getElementById("search-button")
 
-//List of city searched goes here
-var cities = ["Chicago", "Atlanta", "Los Angeles", "Houston", "Orlando", "Seattle", "Denver", "New York"];
-var ul = document.createElement("ul");
-document.getElementById("citylist").appendChild(ul);
+// //List of city searched goes here
+// var cities = ["Chicago", "Atlanta", "Los Angeles", "Houston", "Orlando", "Seattle", "Denver", "New York"];
+// var ul = document.createElement("ul");
+// document.getElementById("citylist").appendChild(ul);
 
-names.forEach(function (name) {
-  var li = document.createElement('li');
-  ul.appendChild(li);
-  li.innerHTML += name;
-});
+// names.forEach(function (name) {
+//   var li = document.createElement('li');
+//   ul.appendChild(li);
+//   li.innerHTML += name;
+// });
 
-//Local storage for cities
-localStorage.setItem("");
+// //Local storage for cities
+// localStorage.setItem("");
 
 //City, Temp, Humidity, Wind speed & UV index go here
 
@@ -23,21 +23,20 @@ localStorage.setItem("");
 
 
 
-//Ajax call function (API KEY = 524901&appid=f05e3532564af745366f28fa6c91999b)
-// function getWeather(cityName) {
-  // dataType: JSON
+Ajax call function (API KEY = 524901&appid=f05e3532564af745366f28fa6c91999b)
+function getWeather(cityName) {
+  dataType: JSON
+}
 
-// }
+var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=" + cityName + "&appid=" + APIKey;
+console.log(response)
+$.ajax({
+  url: queryURL,
+  method: "GET"
 
-// var getWeather
+});
 
 
-// var queryURL = http://api.openweathermap.org/data/2.5/forecast?id=" + cityName + "&appid=" + APIKey;
-
-// console.log(queryURL)
-// $.ajax({
-//   url: queryURL,
-//   method: "GET"
 // // }).then(function (response) {
 //   var "" = JSON.parse(localStorage.getItem(""));
   
@@ -53,9 +52,13 @@ localStorage.setItem("");
 // // });
 
 //Click event
-citySearch.addEventListener("click",function() {
-  searchHistory = [];
-  renderSearchHistory();
-}
+// citySearch.addEventListener("click",function() {
+//   searchHistory = [];
+//   renderSearchHistory();
+// });
 
-// }
+document.getElementById("search-button").addEventListener("click", displayWeather);
+function displayWeather() {
+  document.getElementById("").innerHTML = Weather();
+  console.log("clicked!!")
+}
