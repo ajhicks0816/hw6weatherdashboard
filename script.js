@@ -22,20 +22,29 @@
 // var weatherBoxes
 
 
-
-Ajax call function (API KEY = 524901&appid=f05e3532564af745366f28fa6c91999b)
+// Ajax call function (APIKey = 524901&appid=f05e3532564af745366f28fa6c91999b)
 function getWeather(cityName) {
   dataType: JSON
 }
 
 var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=" + cityName + "&appid=" + APIKey;
-console.log(response)
+
 $.ajax({
   url: queryURL,
   method: "GET"
 
-});
+}).then(function(response) {
 
+  console.log(response)
+  
+}
+
+document.getElementById("search-button").addEventListener("click", displayWeather);
+function displayWeather() {
+  // document.getElementById("").innerHTML = Weather();
+  console.log("clicked!!")
+
+};
 
 // // }).then(function (response) {
 //   var "" = JSON.parse(localStorage.getItem(""));
@@ -57,8 +66,3 @@ $.ajax({
 //   renderSearchHistory();
 // });
 
-document.getElementById("search-button").addEventListener("click", displayWeather);
-function displayWeather() {
-  document.getElementById("").innerHTML = Weather();
-  console.log("clicked!!")
-}
