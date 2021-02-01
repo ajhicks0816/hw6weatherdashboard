@@ -20,37 +20,34 @@ function currentWeather() {
   $.ajax({
     url: "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + apiKey,
     method: "GET"
-  }).then(function (response){
+  }).then(function (response) {
 
     console.log(response)
   });
 
-//5-day forecast for city requested
-// var weatherBoxes
+  //5-day forecast for city requested
+  // var weatherBoxes
 
 
-// apiKey = "api.openweather.org/data/2.5/forecast?id=524901&appid=f05e3532564af745366f28fa6c91999b";
-// calling API
+  // apiKey = "api.openweather.org/data/2.5/forecast?id=524901&appid=f05e3532564af745366f28fa6c91999b";
+  // calling API
 
-function getWeather(cityName) {
-  dataType: JSON
-}
+  function getWeather(cityName) {
+    dataType: JSON
+  }
 
-var queryURL ="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + apiKey;
+  var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + apiKey;
 
-$.ajax({
-  url: queryURL,
-  method: "GET"
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (response) {
 
-})
-.then(function(response) {
+    console.log(response)
+  });
 
-  console.log(response)
-  
-});
-
-//Click Event
-document.getElementById("search-button").addEventListener("click", displayWeather);
-function displayWeather()
+  // //Click Event
+  document.getElementById("search-button").addEventListener("click", displayWeather);
+  function displayWeather()
   document.getElementById("").innerHTML = Weather();
-  console.log(clicked);
+  console.log(clicked)
