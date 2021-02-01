@@ -16,14 +16,14 @@
 // localStorage.setItem("");
 
 //City, Temp, Humidity, Wind speed & UV index go here
-function currentWeather () {
+function currentWeather() {
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + apiKey;
+    url: "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + apiKey,
     method: "GET"
   }).then(function (response){
 
     console.log(response)
-  })
+  });
 
 //5-day forecast for city requested
 // var weatherBoxes
@@ -36,7 +36,7 @@ function getWeather(cityName) {
   dataType: JSON
 }
 
-var queryURL ="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + APIKey;
+var queryURL ="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + apiKey;
 
 $.ajax({
   url: queryURL,
@@ -47,30 +47,10 @@ $.ajax({
 
   console.log(response)
   
-})
+});
 
+//Click Event
 document.getElementById("search-button").addEventListener("click", displayWeather);
-function displayWeather() {
-  // document.getElementById("").innerHTML = Weather();
-  console.log("clicked!!")
-
-};
-
-// // }).then(function (response) {
-//   var "" = JSON.parse(localStorage.getItem(""));
-  
-//   if ("" === null) {
-//     "" = [];
-//   }
-// "".push(city);
-
-// localStorage.setItem("", JSON.stringify(""));
-
-// console.log(response);
-// }
-// // });
-
-//Click event
-// citySearch.addEventListener("click",function() {
-//   searchHistory = [];
-//   renderSearchHistory ();
+function displayWeather()
+  document.getElementById("").innerHTML = Weather();
+  console.log(clicked);
