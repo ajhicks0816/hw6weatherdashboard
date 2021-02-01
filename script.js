@@ -16,28 +16,38 @@
 // localStorage.setItem("");
 
 //City, Temp, Humidity, Wind speed & UV index go here
+function currentWeather () {
+  $.ajax({
+    url: "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + apiKey;
+    method: "GET"
+  }).then(function (response){
 
+    console.log(response)
+  })
 
 //5-day forecast for city requested
 // var weatherBoxes
 
 
-// Ajax call function (APIKey = 524901&appid=f05e3532564af745366f28fa6c91999b)
+// apiKey = "api.openweather.org/data/2.5/forecast?id=524901&appid=f05e3532564af745366f28fa6c91999b";
+// calling API
+
 function getWeather(cityName) {
   dataType: JSON
 }
 
-var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=" + cityName + "&appid=" + APIKey;
+var queryURL ="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid" + cityName + APIKey;
 
 $.ajax({
   url: queryURL,
   method: "GET"
 
-}).then(function(response) {
+})
+.then(function(response) {
 
   console.log(response)
   
-}
+})
 
 document.getElementById("search-button").addEventListener("click", displayWeather);
 function displayWeather() {
@@ -63,6 +73,4 @@ function displayWeather() {
 //Click event
 // citySearch.addEventListener("click",function() {
 //   searchHistory = [];
-//   renderSearchHistory();
-// });
-
+//   renderSearchHistory ();
